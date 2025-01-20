@@ -4,7 +4,8 @@ const path = require("path");
 
 async function copyDirectory() {
   try {
-    await fs.mkdir(path.join(__dirname, "files-copy"));
+    const projectDistPath = path.join(__dirname, "files-copy");
+    await fs.mkdir(projectDistPath, { recursive: true });
     console.log("Folder is created");
 
     const sourceDir = "./files";
