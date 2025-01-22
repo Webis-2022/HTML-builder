@@ -1,3 +1,4 @@
+
 const fs = require("fs/promises");
 const path = require("path");
 
@@ -22,4 +23,9 @@ async function listFilesInfo(folderPath) {
   }
 }
 
-listFilesInfo("secret-folder");
+const folderPath = path.join(__dirname, "secret-folder");
+
+listFilesInfo(folderPath);
+
+
+
